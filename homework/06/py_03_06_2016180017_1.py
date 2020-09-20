@@ -21,7 +21,7 @@ def handle_events():
 					speed=1
 					start = True
 				else:
-					speed = 2
+					speed +=1
 				#이후에는 리스트에 값만을 추가.
 				mx.append(e.x)
 				my.append(get_canvas_height()-e.y-1)
