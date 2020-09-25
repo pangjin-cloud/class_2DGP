@@ -45,6 +45,9 @@ TitleScene->RankingBoard: Ranking Button click
 RankingBoard->TitleScene: Cencle Button click or Backspace
 ```
 
+```sequence
+RankingBoard->TitleScene: Cencle Button click or Backspace
+```
 ## 4. 필요한 기술
 
 * **다른과목에서 배운기술** : 윈도우API에서 오브젝트를 이동시키거나 충돌 판정 해보았다. 또한 간단한 게임들을 직접 구현해 보았다.
