@@ -44,7 +44,7 @@ TitleScene->RankingBoard: Ranking Button click
 RankingBoard->TitleScene: Cencle Button click or Backspace
 ```
 
-->확인 해보니 다이어그램이 안나와서 htlm첨부하겠습니다 [README.html](..\..\..\바탕 화면\README.html) 
+->확인 해보니 다이어그램이 안나와서 term project 폴더에 htlm첨부하겠습니다
 
 ## 4. 필요한 기술
 
