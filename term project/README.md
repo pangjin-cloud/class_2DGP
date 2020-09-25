@@ -22,29 +22,9 @@
 
 ## 3. 각 GameState별 항목 정리
 
-```sequence
-TitleScene->GameScene: Start Button Click \nPress any key to continue
-note over TitleScene: <End ,Start, Ranking button>
-GameScene->TitleScene: Title Button Click \nPress any key to continue
-note left of GameScene: Scene Change
-note over GameScene: <Status, ranking, title button>, <Defenceboard>,\n<MyUnit>, <EnemyUnit>, <Upgrade button>
-note over StatusWindow:<Player, Stage, Upgrade, \nMoney infomation><Ranking,Cencle Button>
-GameScene->StatusWindow: Status Button click
-StatusWindow->GameScene: Cencle Button click or Backspace
-note right of GameScene: Overlay
-note over PokerBoard: <5x1Card board><Card deck>\n<Reroll button>
-GameScene->PokerBoard: PokerBoard Button click\n
-PokerBoard->GameScene: Cencle Button click or Backspace
-note right of GameScene: Scene Change
-note over RankingBoard: <Cencle Button>\n<Ranking Infomation>
-GameScene->RankingBoard: Ranking Button click
-RankingBoard->GameScene: Cencle Button click or Backspace
-note left of RankingBoard: Scene Change 
-TitleScene->RankingBoard: Ranking Button click
-RankingBoard->TitleScene: Cencle Button click or Backspace
-```
+코드짜고 확인 해보니 다이어그램이 안나와서 사진 첨부했습니다
 
-->확인 해보니 다이어그램이 안나와서 term프로젝트 폴더에 htlm첨부하겠습니다
+![다이어그램](C:\Users\youo9\OneDrive\바탕 화면\다이어그램.PNG)
 
 ## 4. 필요한 기술
 
