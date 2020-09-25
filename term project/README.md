@@ -43,7 +43,6 @@ RankingBoard-->GameScene: Cencle Button click or Backspace
 note left of RankingBoard: Scene Change 
 TitleScene-->RankingBoard: Ranking Button click
 RankingBoard-->TitleScene: Cencle Button click or Backspace
-
 ```
 
 ## 4. 필요한 기술
