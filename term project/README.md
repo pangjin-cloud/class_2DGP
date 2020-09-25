@@ -23,7 +23,6 @@
 ## 3. 각 GameState별 항목 정리
 
 ```sequence
-#GameState
 TitleScene->GameScene: Start Button Click \nPress any key to continue
 note over TitleScene: <End ,Start, Ranking button>
 GameScene->TitleScene: Title Button Click \nPress any key to continue
@@ -44,6 +43,9 @@ note left of RankingBoard: Scene Change
 TitleScene->RankingBoard: Ranking Button click
 RankingBoard->TitleScene: Cencle Button click or Backspace
 ```
+
+->확인 해보니 다이어그램이 안나와서 htlm첨부하겠습니다 [README.html](..\..\..\바탕 화면\README.html) 
+
 ## 4. 필요한 기술
 
 * **다른과목에서 배운기술** : 윈도우API에서 오브젝트를 이동시키거나 충돌 판정 해보았다. 또한 간단한 게임들을 직접 구현해 보았다.
