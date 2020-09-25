@@ -22,22 +22,21 @@
 
 ## 3. 각 GameState별 항목 정리
 
-```mermaid
-sequenceDiagram
-TitleScene->GameScene: Start Button Click <br/>Press any key to continue
+```sequence
+TitleScene->GameScene: Start Button Click \nPress any key to continue
 note over TitleScene: <End ,Start, Ranking button>
-GameScene->TitleScene: Title Button Click <br/>Press any key to continue
+GameScene->TitleScene: Title Button Click \nPress any key to continue
 note left of GameScene: Scene Change
-note over GameScene: <Status, ranking, <br/>title button>,<br/> <Defenceboard>,<br/><MyUnit>,<br/> <EnemyUnit>,<br/> <Upgrade button>
-note over StatusWindow:<Player,Stage,Upgrade,Money <br/>infomation>, <br/><Ranking,Cencle Button>
+note over GameScene: <Status, ranking, title button>, <Defenceboard>,\n<MyUnit>, <EnemyUnit>, <Upgrade button>
+note over StatusWindow:<Player, Stage, Upgrade, \nMoney infomation><Ranking,Cencle Button>
 GameScene->StatusWindow: Status Button click
 StatusWindow->GameScene: Cencle Button click or Backspace
 note right of GameScene: Overlay
-note over PokerBoard: <5x1Card board><Card deck><br/><Reroll button>
+note over PokerBoard: <5x1Card board><Card deck>\n<Reroll button>
 GameScene->PokerBoard: PokerBoard Button click\n
 PokerBoard->GameScene: Cencle Button click or Backspace
 note right of GameScene: Scene Change
-note over RankingBoard: <Cencle Button><br/><Ranking Infomation>
+note over RankingBoard: <Cencle Button>\n<Ranking Infomation>
 GameScene->RankingBoard: Ranking Button click
 RankingBoard->GameScene: Cencle Button click or Backspace
 note left of RankingBoard: Scene Change 
