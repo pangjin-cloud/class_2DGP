@@ -17,32 +17,31 @@
 
 ## 2. GameState(Scene)의 수 및 각각의 이름
 
-* **GameState의 종류** : 로고, 타이틀화면, 게임플레이씬, 
-
-  스테이터스창(오버레이), 포커보드씬, 랭킹보드(오버레이)
+* **GameState의 종류** 
+로고, 타이틀화면, 게임플레이씬, 스테이터스창(오버레이), 포커보드씬, 랭킹보드(오버레이)
 
 ## 3. 각 GameState별 항목 정리
 
 ```sequence
-TitleScene-->GameScene: Start Button Click \nPress any key to continue
+TitleScene->GameScene: Start Button Click \nPress any key to continue
 note over TitleScene: <End ,Start, Ranking button>
-GameScene-->TitleScene: Title Button Click \nPress any key to continue
+GameScene->TitleScene: Title Button Click \nPress any key to continue
 note left of GameScene: Scene 전환
 note over GameScene: <Status, ranking, title button>, <Defenceboard>,\n<MyUnit>, <EnemyUnit>, <Upgrade button>
 note over StatusWindow:<Player, Stage, Upgrade, \nMoney infomation>, <Ranking,Cencle Button>
-GameScene-->StatusWindow: Status Button click
-StatusWindow-->GameScene: Cencle Button click or Backspace
+GameScene->StatusWindow: Status Button click
+StatusWindow->GameScene: Cencle Button click or Backspace
 note right of GameScene: Overlay
 note over PokerBoard: <5x1Card board><Card deck>\n<Reroll button>
-GameScene-->PokerBoard: PokerBoard Button click\n
-PokerBoard-->GameScene: Cencle Button click or Backspace
+GameScene->PokerBoard: PokerBoard Button click\n
+PokerBoard->GameScene: Cencle Button click or Backspace
 note right of GameScene: Scene Change
-note over RankingBoard: <Cencle Button>\n<Raking Infomation>
-GameScene-->RankingBoard: Ranking Button click
-RankingBoard-->GameScene: Cencle Button click or Backspace
+note over RankingBoard: <Cencle Button>\n<Ranking Infomation>
+GameScene->RankingBoard: Ranking Button click
+RankingBoard->GameScene: Cencle Button click or Backspace
 note left of RankingBoard: Scene Change 
-TitleScene-->RankingBoard: Ranking Button click
-RankingBoard-->TitleScene: Cencle Button click or Backspace
+TitleScene->RankingBoard: Ranking Button click
+RankingBoard->TitleScene: Cencle Button click or Backspace
 ```
 
 ## 4. 필요한 기술
@@ -52,21 +51,3 @@ RankingBoard-->TitleScene: Cencle Button click or Backspace
   다양한 파이썬 라이브러리 함수들, 오브젝트들의 이미지를 다루는 기술(반전,회전 등)
 * **다루지 않는거 같아서 요청할 기술** : bot이 사람이 하는것과 비슷하게 게임내에서 행동하는 기술, 
   화면 오버레이, 물체를 마우스로 클릭해서 놓을때 자석처럼 끌어당기는 효과가 생기는 기술.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
