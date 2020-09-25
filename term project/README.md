@@ -23,6 +23,7 @@
 ## 3. 각 GameState별 항목 정리
 
 ```sequence
+#GameState
 TitleScene->GameScene: Start Button Click \nPress any key to continue
 note over TitleScene: <End ,Start, Ranking button>
 GameScene->TitleScene: Title Button Click \nPress any key to continue
