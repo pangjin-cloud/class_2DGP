@@ -22,7 +22,8 @@
 
 ## 3. 각 GameState별 항목 정리
 
-https://user-images.githubusercontent.com/70594667/94394563-9ddb8c00-0198-11eb-8aa3-b743ecb32c5f.PNG
+![다이어그램](https://user-images.githubusercontent.com/70594667/94394743-01fe5000-0199-11eb-89a7-6c30d0a0d43e.PNG)
+
 
 ## 4. 필요한 기술
 
