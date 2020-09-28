@@ -22,7 +22,7 @@
 
 ## 3. 각 GameState별 항목 정리
 
-->확인 해보니 다이어그램이 안나와서 term프로젝트 폴더에 htlm첨부하겠습니다
+https://user-images.githubusercontent.com/70594667/94394563-9ddb8c00-0198-11eb-8aa3-b743ecb32c5f.PNG
 
 ## 4. 필요한 기술
 
