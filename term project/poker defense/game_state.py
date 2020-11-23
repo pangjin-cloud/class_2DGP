@@ -3,44 +3,47 @@ from pico2d import *
 import gfw
 import gobj
 from button import Button
+import poker_state
 stage_x = 10
 stage_y = 25
-pokercenter_lbwh = 300,300,100,100 
 theme = 'ingame'
 TEXT_COLOR = (255, 255, 255)
-
+wave = 1
+stage = 1
 def start(theme):
-    pass
+    pause()
+    poker_state.theme = theme
+    gfw.push(poker_state)
 def enter():
     build_world()
 def resume():
     build_world()
 def build_world():
-    gfw.world.init(['ingame_bg','window','ingame_ui'])
+    gfw.world.init(['ingame_bg','ingame_ui'])
     center = get_canvas_width()//2, get_canvas_height()//2
     
-    global font, stage, wave
-    font = gfw.font.load(gobj.res('StarcraftNormal.ttf'), 40)     
-    stage = 1
-    wave = 1
-    
+    global font
+    font = gfw.font.load(gobj.res('StarcraftNormal.ttf'), 40)    
     gfw.world.add(gfw.layer.ingame_bg, gobj.ImageObject(theme + '/tile_map.png', center))
 
     l,b,w,h = 25,550,get_canvas_width()-550,50
-    btn = Button(l,b,w,h,font,"poker",lambda: start(""))
+    btn = Button(l,b,w,h,font,"poker",lambda: start("poker"))
     gfw.world.add(gfw.layer.ingame_ui, btn)
     l+=250
-    btn = Button(l,b,w,h,font,"Ranking",lambda: start(""))
+    btn = Button(l,b,w,h,font,"Ranking",lambda: play())
     gfw.world.add(gfw.layer.ingame_ui, btn)
     l+=250
-    btn = Button(l,b,w,h,font,"option",lambda: start(""))
+    btn = Button(l,b,w,h,font,"option",lambda: play())
     gfw.world.add(gfw.layer.ingame_ui, btn)
     b =0
-    btn = Button(l,b,w,h,font,"play",lambda: start(""))
+    btn = Button(l,b,w,h,font,"play",lambda:play() )
     gfw.world.add(gfw.layer.ingame_ui, btn)
-
+def play():
+    pass
 def update():
     gfw.world.update()
+def pause():
+    pass
 def draw():
     global font, stage, wave, window
     gfw.world.draw()
